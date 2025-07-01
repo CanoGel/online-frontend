@@ -249,88 +249,88 @@ const HomePage = () => {
     </div>
   </div>
 </section>
-      {/* Testimonials Section */}
+      /* Testimonials Section */
 
-      <section className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-16">
-      <span className="inline-block mb-4 text-sm font-semibold tracking-wider text-indigo-600 uppercase">
-        Community Voices
-      </span>
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-        Readers <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Love Us</span>
-      </h2>
-      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-        Join thousands of book lovers who've found their next favorite read with us
-      </p>
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {[
-        {
-          quote: "The book selection is incredible and the delivery was faster than expected. I've discovered so many new favorites here!",
-          author: "Sarah Johnson",
-          role: "Avid Reader",
-          rating: 5,
-          image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&h=128&q=80"
-        },
-        {
-          quote: "As a book club organizer, I appreciate their curated collections. Makes choosing our next read so much easier!",
-          author: "Michael Thompson",
-          role: "Book Club Leader",
-          rating: 5,
-          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&h=128&q=80"
-        },
-        {
-          quote: "The customer service team went above and beyond when I had an issue with my order. Truly exceptional experience!",
-          author: "Emma Kowalski",
-          role: "Loyal Customer",
-          rating: 5,
-          image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&h=128&q=80"
-        }
-      ].map((testimonial, index) => (
-        <motion.div 
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
-          whileHover={{ y: -5 }}
-          className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-        >
-          <div className="flex mb-4">
-            {[...Array(testimonial.rating)].map((_, i) => (
-              <svg 
-                key={i}
-                className="w-5 h-5 text-amber-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
+        <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+        <span className="inline-block mb-4 text-sm font-semibold tracking-wider text-indigo-600 uppercase">
+          Community Voices
+        </span>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Readers <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Love Us</span>
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Join thousands of book lovers who've found their next favorite read with us
+        </p>
           </div>
-          <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed relative">
-            <div className="absolute -top-6 -left-6 text-7xl text-indigo-50 font-serif z-0">"</div>
-            <p className="relative z-10">{testimonial.quote}</p>
-          </blockquote>
-          <div className="flex items-center">
-            <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-indigo-100">
-              <img 
-                src={testimonial.image} 
-                alt={testimonial.author}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div>
-              <p className="font-semibold text-gray-900">{testimonial.author}</p>
-              <p className="text-sm text-gray-500">{testimonial.role}</p>
-            </div>
-          </div>
-        </motion.div>
-      ))}
-    </div>
 
-    {/* Trust indicators */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            quote: "The book selection is incredible and the delivery was faster than expected. I've discovered so many new favorites here!",
+            author: "Sarah Johnson",
+            role: "Avid Reader",
+            rating: 5,
+            image: "/images/testimonial1.jpg"
+          },
+          {
+            quote: "As a book club organizer, I appreciate their curated collections. Makes choosing our next read so much easier!",
+            author: "Michael Thompson",
+            role: "Book Club Leader",
+            rating: 5,
+            image: "/images/testimonial2.jpg"
+          },
+          {
+            quote: "The customer service team went above and beyond when I had an issue with my order. Truly exceptional experience!",
+            author: "Emma Kowalski",
+            role: "Loyal Customer",
+            rating: 5,
+            image: "/images/Canogel.jpg"
+          }
+        ].map((testimonial, index) => (
+          <motion.div 
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            whileHover={{ y: -5 }}
+            className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+          >
+            <div className="flex mb-4">
+          {[...Array(testimonial.rating)].map((_, i) => (
+            <svg 
+              key={i}
+              className="w-5 h-5 text-amber-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          ))}
+            </div>
+            <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed relative">
+          <div className="absolute -top-6 -left-6 text-7xl text-indigo-50 font-serif z-0">"</div>
+          <p className="relative z-10">{testimonial.quote}</p>
+            </blockquote>
+            <div className="flex items-center">
+          <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-indigo-100">
+            <img 
+              src={testimonial.image} 
+              alt={testimonial.author}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900">{testimonial.author}</p>
+            <p className="text-sm text-gray-500">{testimonial.role}</p>
+          </div>
+            </div>
+          </motion.div>
+        ))}
+          </div>
+
+          {/* Trust indicators */}
     <div className="mt-20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
         {[
