@@ -269,21 +269,21 @@ const HomePage = () => {
         {[
           {
             quote: "The book selection is incredible and the delivery was faster than expected. I've discovered so many new favorites here!",
-            author: "Sarah Johnson",
+            author: "Yuusuf Abdiladif",
             role: "Avid Reader",
             rating: 5,
-            image: "/images/testimonial1.jpg"
+            image: "/images/Yuusuf.jpg"
           },
           {
             quote: "As a book club organizer, I appreciate their curated collections. Makes choosing our next read so much easier!",
-            author: "Michael Thompson",
+            author: "Xasan Iraadka",
             role: "Book Club Leader",
             rating: 5,
-            image: "/images/testimonial2.jpg"
+            image: "/images/Iraadka.jpg"
           },
           {
             quote: "The customer service team went above and beyond when I had an issue with my order. Truly exceptional experience!",
-            author: "Emma Kowalski",
+            author: "Ahmad Isse Farah",
             role: "Loyal Customer",
             rating: 5,
             image: "/images/Canogel.jpg"
