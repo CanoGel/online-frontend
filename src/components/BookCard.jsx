@@ -1,18 +1,37 @@
 import { Link } from 'react-router-dom';
-import { getImageUrl } from '../utils/imageUrl';
 
+/**
+ * @param {{ book: {
+ *   _id: string,
+ *   title: string,
+ *   author: string,
+ *   description: string,
+ *   price: number,
+ *   countInStock: number,
+ *   image: string,
+ *   category: string,
+ *   user: string,
+ *   createdAt: string,
+ *   updatedAt: string
+ * }}} props
+ */
 const BookCard = ({ book }) => {
-  return (
+  const imageUrl = book.image 
+    ? book.image.startsWith('http') 
+      ? book.image 
+      : `https://online-book-backend.onrender.com${book.image}`
+    : '/images/placeholder.jpg';
+  return   (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       <Link to={`/books/${book._id}`}>
         <img
-          src={getImageUrl(book.image)}
+          src={imageUrl}
           alt={book.title}
           className="w-full h-48 object-cover"
           onError={(e) => {
-            e.target.src = '/images/placeholder.jpg';
+            e.target.src = '/images/placeholder.jpg'; // Fallback if image fails to load
           }}
-        />
+            />
         <div className="p-4">
           <h3 className="text-lg font-semibold mb-1 line-clamp-1">{book.title}</h3>
           <p className="text-gray-600 text-sm mb-2">by {book.author}</p>

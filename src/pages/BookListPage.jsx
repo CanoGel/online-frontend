@@ -85,8 +85,8 @@ const BookListPage = () => {
               className="cursor-pointer" 
               onClick={() => handleViewDetails(book._id)}
             >
-               <img 
-                src={getImageUrl(book.image)}
+              <img 
+                src={book.image?.startsWith('http') ? book.image : `https://online-book-backend.onrender.com${book.image}`}
                 alt={book.title}
                 className="w-full h-48 object-cover"
                 onError={(e) => {
