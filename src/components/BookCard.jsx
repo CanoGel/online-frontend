@@ -6,13 +6,13 @@ const BookCard = ({ book }) => {
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       <Link to={`/books/${book._id}`}>
         <img
-  src={getImageUrl(book.image)}
-  alt={book.title}
-  className="w-full h-48 object-cover"
-  onError={(e) => {
-    e.target.src = '/images/book-placeholder.jpg';
-  }}
-/>
+          src={getImageUrl(book.image)}
+          alt={book.title}
+          className="w-full h-48 object-cover"
+          onError={(e) => {
+            e.target.src = '/images/placeholder.jpg';
+          }}
+        />
         <div className="p-4">
           <h3 className="text-lg font-semibold mb-1 line-clamp-1">{book.title}</h3>
           <p className="text-gray-600 text-sm mb-2">by {book.author}</p>
