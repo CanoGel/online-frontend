@@ -16,7 +16,7 @@ const BookForm = ({ book: initialBook, onSuccess, onCancel }) => {
 
   const [imagePreview, setImagePreview] = useState(
     initialBook?.image 
-      ? `http://localhost:5000${initialBook.image}` 
+      ? `https://online-book-backend.onrender.com${initialBook.image}` 
       : null
   );
   const queryClient = useQueryClient();

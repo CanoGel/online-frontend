@@ -85,7 +85,7 @@ const BookListPage = () => {
               onClick={() => handleViewDetails(book._id)}
             >
               <img 
-                src={book.image?.startsWith('http') ? book.image : `http://localhost:5000${book.image}`}
+                src={book.image?.startsWith('http') ? book.image : `https://online-book-backend.onrender.com${book.image}`}
                 alt={book.title}
                 className="w-full h-48 object-cover"
                 onError={(e) => {

@@ -276,6 +276,7 @@ const PlaceOrderPage = () => {
                       >
                         <option value="">Select Country</option>
                         <option value="US">United States</option>
+                        <option value="SO">Somalia</option>
                         <option value="CA">Canada</option>
                         <option value="UK">United Kingdom</option>
                         <option value="AU">Australia</option>

@@ -46,7 +46,7 @@ const CartPage = () => {
                     <div className="flex items-center">
                       <div className="flex-shrink-0 w-20 h-20 rounded-md overflow-hidden">
                         <img
-                          src={item.image?.startsWith('http') ? item.image : `http://localhost:5000${item.image}`}
+                          src={item.image?.startsWith('http') ? item.image : `https://online-book-backend.onrender.com${item.image}`}
                           alt={item.title}
                           className="w-full h-full object-cover object-center"
                           onError={e => { e.target.src = '/images/book-placeholder.jpg'; }}

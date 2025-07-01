@@ -19,7 +19,7 @@ const BookCard = ({ book }) => {
   const imageUrl = book.image 
     ? book.image.startsWith('http') 
       ? book.image 
-      : `http://localhost:5000${book.image}`
+      : `https://online-book-backend.onrender.com${book.image}`
     : '/images/placeholder.jpg';
   return   (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">

@@ -137,7 +137,7 @@ const OrderSuccessPage = () => {
                           src={
                             item.image?.startsWith('http')
                               ? item.image
-                              : `http://localhost:5000${item.image}`
+                              : `https://online-book-backend.onrender.com${item.image}`
                           }
                           alt={item.title}
                           className="w-full h-full object-cover object-center"
