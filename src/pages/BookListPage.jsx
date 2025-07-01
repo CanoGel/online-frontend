@@ -6,6 +6,7 @@ import { toast } from 'react-hot-toast';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 import { useState } from 'react';
+import { getImageUrl } from '../utils/imageUrl';
 import { useCart } from '../context/CartContext'; // <-- Add this import
 
 const BookListPage = () => {
@@ -84,8 +85,8 @@ const BookListPage = () => {
               className="cursor-pointer" 
               onClick={() => handleViewDetails(book._id)}
             >
-              <img 
-                src={book.image?.startsWith('http') ? book.image : `https://online-book-backend.onrender.com${book.image}`}
+               <img 
+                src={getImageUrl(book.image)}
                 alt={book.title}
                 className="w-full h-48 object-cover"
                 onError={(e) => {

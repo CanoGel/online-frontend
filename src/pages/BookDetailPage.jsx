@@ -8,6 +8,7 @@ import BookForm from '../components/BookForm';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 import { toast } from 'react-hot-toast';
+import { getImageUrl } from '../utils/imageUrl';
 
 const BookDetailPage = () => {
   const { id } = useParams();
@@ -70,8 +71,8 @@ const BookDetailPage = () => {
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/3 p-4">
-            <img
-              src={book.image?.startsWith('http') ? book.image : `https://online-book-backend.onrender.com${book.image}`}
+             <img
+              src={getImageUrl(book.image)}
               alt={book.title}
               className="w-full h-auto object-cover rounded-lg"
               onError={(e) => {
